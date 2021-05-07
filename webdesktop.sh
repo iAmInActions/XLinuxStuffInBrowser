@@ -8,6 +8,7 @@ echo "Please select gdm3 as the default display manager."
 sleep 3
 apt install -y tigervnc-standalone-server lxde lxterminal
 useradd notroot
+echo 'notroot  ALL=(ALL:ALL) ALL' >> /etc/sudoers
 echo "webtop" | passwd --stdin notroot
 echo "Set password!"
 sleep 4
