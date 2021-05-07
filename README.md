@@ -6,7 +6,7 @@ Usefull scripts for Ubuntu Playground:
 
 # Web desktop
 Needs Ubuntu 18.04 or newer
-NOTE: You need to select lightdm or it wont run.
+NOTE: You need to select gdm3 or it wont run.
 
 ``
 curl https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/webdesktop.sh | bash
