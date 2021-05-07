@@ -18,3 +18,6 @@ Only works on Ubuntu 16.04
 ``
 curl https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/minecraft_instant_vnc_setup.sh | bash
 ``
+
+# Shoutouts
+Big thank you to [ayunami2000](http://github.com/ayunami2000/) for making a better noVNC version that came in useful when making this.
