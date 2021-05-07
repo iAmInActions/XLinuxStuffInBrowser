@@ -14,14 +14,14 @@ Password for the default user is "webtop"
 NOTE: You need to select gdm3 or it wont run.
 
 ``
-curl https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/webdesktop.sh | bash
+wget https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/webdesktop.sh && chmod +x ./webdesktop.sh && ./webdesktop.sh
 ``
 
 # Instant Minecraft
 Only works on Ubuntu 16.04
 
 ``
-curl https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/minecraft_instant_vnc_setup.sh | bash
+wget https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/minecraft_instant_vnc_setup.sh && chmod +x ./minecraft_instant_vnc_setup.sh && ./minecraft_instant_vnc_setup.sh
 ``
 
 # Shoutouts
