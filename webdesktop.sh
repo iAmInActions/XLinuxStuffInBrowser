@@ -17,7 +17,8 @@ clear
 tigervncserver -noxstartup -SecurityTypes None -geometry 1280x720 :0
 export DISPLAY=:0
 wget https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/launch-lxde-manually.sh
-sudo -u notroot bash launch-lxde-manually.sh notroot
+chmod +x ./launch-lxde-manually.sh
+sudo -u notroot ./launch-lxde-manually.sh
 while true
 do
 sleep 1000
