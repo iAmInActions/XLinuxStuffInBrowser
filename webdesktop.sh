@@ -4,15 +4,19 @@ apt install -y xvfb x11vnc build-essential libx11-dev libxcursor-dev libxrandr-d
 apt install -y openjdk-8-jre
 git clone https://github.com/ayunami2000/noVNC
 ./noVNC/utils/launch.sh --listen 80 &
-echo "Please select lightdm as the default display manager."
+echo "Please select gdm3 as the default display manager."
+sleep 3
 apt install -y tigervnc-standalone-server lxde lxterminal
 useradd notroot
 clear
-echo "Enter a user password:"
+read -p "Press Enter and then enter a password for your user account:"
 passwd notroot
+echo "Set password!"
+sleep 4
+clear
 tigervncserver -noxstartup -SecurityTypes None -geometry 1280x720 :0
 export DISPLAY=:0
-lightdm
+gdm3
 while true
 do
 sleep 1000
