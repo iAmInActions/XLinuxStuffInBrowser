@@ -8,6 +8,7 @@ Usefull scripts for Ubuntu Playground:
 
 # Web desktop
 Needs Ubuntu 18.04 or newer
+Password for the default user is "webtop"
 NOTE: You need to select gdm3 or it wont run.
 
 ``
