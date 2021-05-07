@@ -20,4 +20,4 @@ curl https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/minecraf
 ``
 
 # Shoutouts
-Big thank you to [ayunami2000](http://github.com/ayunami2000/) for making a better noVNC version that came in useful when making this.
+Big thank you to [ayunami2000](http://github.com/ayunami2000/) for helping with this project.
