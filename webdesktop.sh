@@ -14,7 +14,7 @@ sleep 4
 clear
 wget https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/lxde-vnc.sh
 chmod +x ./lxde-vnc.sh
-sudo -u notroot ./lxde-vnc.sh &
+sudo -u notroot ./lxde-vnc.sh
 bash --login
 while true
 do
