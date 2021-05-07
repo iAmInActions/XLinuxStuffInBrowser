@@ -8,9 +8,7 @@ echo "Please select gdm3 as the default display manager."
 sleep 3
 apt install -y tigervnc-standalone-server lxde lxterminal
 useradd notroot
-clear
-read -p "Press Enter and then enter a password for your user account:"
-passwd notroot
+echo "webtop" | passwd --stdin notroot
 echo "Set password!"
 sleep 4
 clear
@@ -20,5 +18,6 @@ sudo -u notroot ./lxde-vnc.sh &
 bash --login
 while true
 do
+bash --login
 sleep 1000
 done
