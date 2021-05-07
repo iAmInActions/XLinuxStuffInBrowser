@@ -7,6 +7,7 @@ git clone https://github.com/ayunami2000/noVNC
 sudo apt install -y tigervnc-standalone-server lxde lxterminal
 tigervncserver -noxstartup -SecurityTypes None :0
 export DISPLAY=:0
+openbox &
 lxsession &
 lxterminal &
 while true
