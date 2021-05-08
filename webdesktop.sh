@@ -6,16 +6,19 @@ git clone https://github.com/ayunami2000/noVNC
 ./noVNC/utils/launch.sh --listen 80 &
 echo "Please select gdm3 as the default display manager."
 sleep 3
-apt install -y tigervnc-standalone-server lxde lxterminal
+apt install -y tigervnc-standalone-server lxde lxterminal firefox
 useradd notroot
 echo 'notroot  ALL=(ALL:ALL) ALL' >> /etc/sudoers
 echo "webtop" | passwd --stdin notroot
 echo "Set password!"
 sleep 4
 clear
+mkdir /home/notroot/
+chown notroot /home/notroot/
+cd /home/notroot/
 wget https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/lxde-vnc.sh
 chmod +x ./lxde-vnc.sh
-echo "This part doesnt work by itself yet. Try something like \"sudo -u notroot ./lxde-vnc.sh\"."
+sudo -u notroot ./lxde-vnc.sh\
 bash --login
 while true
 do
