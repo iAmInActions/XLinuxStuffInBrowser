@@ -18,6 +18,9 @@ chown notroot /home/notroot/
 cd /home/notroot/
 
 # Create audio stream
+alsa reload
+alsa resume
+pulseaudio &
 modprobe snd-aloop pcm_substreams=1
 echo "# .asoundrc" >> /etc/asound.conf
 echo "pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }" >> /etc/asound.conf
