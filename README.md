@@ -1,5 +1,10 @@
 # XLinuxStuffInBrowser
 
+# IMPORTANT:
+AT THE MOMENT, NO FILES MODIFIED IN THE VIRTUAL ENVIORMENT WILL BE STORED AFTER CLOSING YOUR BROWSER TAB!!! MAKE SURE TO UPLOAD DOCUMENTS OR GAME SAVES BEFORE CLOSING. IF YOU DONT, THEY WILL BE GONE FOREVER!!!
+
+I am not responsible to any lost data caused by crashes, bugs or other unforseeable problems you may encounter.
+
 # Web desktop
 A fully working desktop that runs in the web browser using my own fork of noVNC.
 
