@@ -22,9 +22,6 @@ modprobe snd-dummy ; modprobe snd-aloop
 alsa reload
 alsa resume
 pulseaudio &
-modprobe snd-aloop pcm_substreams=1
-echo "# .asoundrc" >> /etc/asound.conf
-echo "pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }" >> /etc/asound.conf
 mkdir /root/noVNC/app/desktopaudio/
 cd /root/noVNC/app/desktopaudio/
 ffmpeg -hide_banner -loglevel error -nostdin -f alsa -channels 2 -sample_rate 44100 -i hw:Loopback,1,0 -map 0 -codec:a aac -f ssegment -segment_list stream.m3u -segment_list_flags +live -segment_time 10 out%03d.ts &
