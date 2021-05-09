@@ -17,7 +17,8 @@ mkdir /home/notroot/
 chown notroot /home/notroot/
 cd /home/notroot/
 
-# Create audio stream
+# Set up audio (experimental)
+modprobe snd-dummy ; modprobe snd-aloop
 alsa reload
 alsa resume
 pulseaudio &
