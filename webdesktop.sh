@@ -24,10 +24,24 @@ alsa resume
 pulseaudio &
 modprobe snd-aloop pcm_substreams=1
 echo "# .asoundrc" >> /etc/asound.conf
-echo "pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }" >> /etc/asound.conf
 mkdir /root/noVNC/app/desktopaudio/
 cd /root/noVNC/app/desktopaudio/
+# Old command. Only keep this for legacy purposes
 ffmpeg -hide_banner -loglevel error -nostdin -f alsa -channels 2 -sample_rate 44100 -i hw:Loopback,1,0 -map 0 -codec:a aac -f ssegment -segment_list stream.m3u -segment_list_flags +live -segment_time 10 out%03d.ts &
+# New one
+apt install mpd mpc -y
+mpc add alsa://
+echo 'audio_output {' >> /etc/mpd.conf
+echo '        type    "httpd"' >> /etc/mpd.conf
+echo '        name    "My HTTP Stream"' >> /etc/mpd.conf
+echo '        encoder "vorbis" #or use "lame" for mp3, doesn’t matter' >> /etc/mpd.conf
+echo '        port    "8000"' >> /etc/mpd.conf
+echo '        bitrate "128"' >> /etc/mpd.conf
+echo '        format  "44100:16:1"' >> /etc/mpd.conf
+echo '        max_clients     "0" #0=nolimit' >> /etc/mpd.conf
+echo '}' 
+sudo service mpd restart
+mpc play
 cd /home/notroot/
 
 wget https://raw.githubusercontent.com/iAmInActions/UsefullScripts/main/lxde-vnc.sh
