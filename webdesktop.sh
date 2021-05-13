@@ -9,7 +9,7 @@ sleep 3
 apt install -y tigervnc-standalone-server lxde lxterminal firefox alsa-base alsa-tools pulseaudio
 useradd notroot
 echo 'notroot  ALL=(ALL:ALL) ALL' >> /etc/sudoers
-echo "webtop" | passwd --stdin notroot
+echo "notroot:toorton" | chpasswd
 echo "Set password!"
 sleep 4
 clear
