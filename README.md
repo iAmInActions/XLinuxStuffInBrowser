@@ -10,7 +10,7 @@ A fully working desktop that runs in the web browser using my own fork of noVNC.
 
 Only works on Playground 20.04
 
-Password for the default user is "webtop"
+Password for the default user is "toorton"
 
 NOTE: You need to select gdm3 as the default dm or it may not work as expected.
 
